@@ -1,3 +1,4 @@
+import 'package:app_estantevirtual/modules/splash/splash_module.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         getPages: [
-          GetPage(name: '/', page: () => Container()),
+          ...SplashModule().routers,
         ]);
   }
 }

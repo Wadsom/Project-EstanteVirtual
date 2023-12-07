@@ -1,0 +1,15 @@
+import 'dart:ffi';
+
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+mixin LoarderMixin on GetxController {
+  void loarderListener(RxBool loaderRx) {
+    ever<bool>(loaderRx, (loading) async {
+      if (loading) {
+        await Get.dialog(const Center(child: CircularProgressIndicator()),
+            barrierDismissible: false);
+      } else {}
+    });
+  }
+}
